@@ -1,0 +1,13 @@
+name: pages-build-deployment
+# This empty workflow file will disable the existing workflow
+on:
+  # Disable automatic triggers
+  workflow_dispatch: # Only manual triggers allowed
+
+jobs:
+  # No jobs defined - effectively disables the workflow
+  no-op:
+    runs-on: ubuntu-latest
+    steps:
+      - name: No Operation
+        run: echo "This workflow is intentionally disabled"
