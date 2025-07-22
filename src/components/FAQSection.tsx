@@ -4,33 +4,33 @@ import { ChevronDown, ChevronUp } from 'lucide-react'
 const faqs = [
   {
     id: 1,
-    question: 'Is MessageMirror secure?',
+    question: "Is MessageMirror secure?",
     answer:
-      'Yes, MessageMirror uses OAuth to securely connect to your Gmail account. We never store your messages on our servers - everything is backed up directly to your own Gmail account where only you have access.',
+      "Yes, your data is completely secure. We use end-to-end encryption and never store your messages on our servers. Everything is backed up directly to your own Google accounts.",
   },
   {
     id: 2,
-    question: 'Will this use a lot of data?',
+    question: "Will this use a lot of data?",
     answer:
-      'MessageMirror is designed to be efficient with data usage. In the settings, you can choose to only back up when connected to WiFi if you prefer, and it intelligently syncs only new messages after the initial backup.',
+      "MessageMirror is designed to be efficient with data usage. In the settings, you can choose to only back up when connected to WiFi if you prefer, and it intelligently syncs only new messages after the initial backup.",
   },
   {
     id: 3,
-    question: 'How do I find my backed up messages?',
+    question: "Can I search through my backed up messages?",
     answer:
-      "You have full control over where your data is stored. You can choose both the Gmail label for your text messages and the Google Calendar for your call logs in the app's settings. This allows you to organize your backups exactly how you want them.",
+      "Absolutely! Once your messages are backed up to Gmail, you can use Gmail's powerful search features to find any message by keyword, contact, or date.",
   },
   {
     id: 4,
-    question: 'Will MessageMirror slow down my phone?',
+    question: "Will MessageMirror slow down my phone?",
     answer:
       "MessageMirror runs in the background using Android's best practices to ensure minimal impact on your phone's performance. You can disable automatic backups if you prefer, which allows you to back up your messages and call logs on demand whenever you choose.",
   },
   {
     id: 5,
-    question: 'Can I back up media like photos and videos?',
+    question: "Can I cancel my subscription anytime?",
     answer:
-      'Currently, MessageMirror focuses on backing up text content from messages and call log information. Media attachments are not included in the backup at this time.',
+      "Yes, you can cancel your subscription at any time with no penalties. Your backed up data will remain in your Google accounts even after cancellation.",
   },
 ]
 

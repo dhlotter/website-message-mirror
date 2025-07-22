@@ -14,7 +14,7 @@ export const AppStoreButtons = () => {
         <img 
           src={googlePlayButton} 
           alt="Get it on Google Play" 
-          className="h-16 w-auto object-contain"
+          className="h-12 w-auto object-contain"
           style={{ minWidth: '135px' }}
         />
       </a>
@@ -27,7 +27,7 @@ export const AppStoreButtons = () => {
         <img 
           src={appStoreButton} 
           alt="Download on the App Store" 
-          className="h-16 w-auto object-contain"
+          className="h-12 w-auto object-contain"
           style={{ minWidth: '135px' }}
         />
       </a>
