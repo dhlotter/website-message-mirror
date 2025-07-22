@@ -18,15 +18,15 @@ export const HeroSection = () => {
                 Never lose your conversations again
               </span>
             </div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-200">
-              Your Messages
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-200">Backup Messages</span>
               <br />
-              <span className="text-blue-400">Backed Up Forever</span>
+              <span className="text-blue-400">Search Everything</span>
+              <br />
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-200">Never Lose 'Em</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-300 max-w-xl mx-auto lg:mx-0">
-              MessageMirror backs up your text messages to Gmail labels and call
-              logs to Google Calendar, making them searchable and accessible
-              forever.
+              Securely back up all your messages, find any conversation instantly, and keep them forever. MessageMirror makes your message history searchable and safe.
             </p>
             <div className="mb-10">
               <AppStoreButtons />
