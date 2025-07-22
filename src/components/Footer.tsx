@@ -18,7 +18,7 @@ export const Footer = () => {
           </div>
 
           {/* Right side - Legal links */}
-          <div className="text-right">
+          <div className="text-left md:text-right">
             <h3 className="text-lg font-semibold text-white mb-4">Legal</h3>
             <ul className="space-y-3">
               <li>

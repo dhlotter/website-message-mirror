@@ -4,7 +4,7 @@ import appStoreButton from '../assets/images/apple-appstore-button.svg';
 
 export const AppStoreButtons = () => {
   return (
-    <div className="flex flex-col sm:flex-row gap-4 justify-center items-start">
+    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
       <a
         href="https://play.google.com/store/apps/details?id=com.messagemirror.app"
         target="_blank"
@@ -18,7 +18,7 @@ export const AppStoreButtons = () => {
           style={{ minWidth: '135px' }}
         />
       </a>
-      <a
+      {/* <a
         href="https://apps.apple.com/us/app/messagemirror/id123456789"
         target="_blank"
         rel="noopener noreferrer"
@@ -30,7 +30,7 @@ export const AppStoreButtons = () => {
           className="h-12 w-auto object-contain"
           style={{ minWidth: '135px' }}
         />
-      </a>
+      </a> */}
     </div>
   )
 }
