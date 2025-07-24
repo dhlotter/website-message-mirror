@@ -9,6 +9,7 @@ import { TestimonialsSection } from './components/TestimonialsSection';
 import { PrivacyPolicy } from './pages/PrivacyPolicy';
 import { TermsOfService } from './pages/TermsOfService';
 import { ScrollToTop } from './components/ScrollToTop';
+import { EmailForm } from './components/EmailForm';
 
 // Feature flags
 const FEATURE_FLAGS = {
@@ -49,6 +50,7 @@ const Home = () => (
     <FeaturesSection />
     {FEATURE_FLAGS.SHOW_TESTIMONIALS && <TestimonialsSection />}
     <FAQSection />
+    <EmailForm />
   </>
 );
 
