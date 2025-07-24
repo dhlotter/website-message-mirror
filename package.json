@@ -23,7 +23,7 @@
     "wrangler": "^4.25.1"
   },
   "scripts": {
-    "start": "wrangler pages dev -- vite",
+    "start": "wrangler pages dev --kv=EMAILS -- vite",
     "build": "vite build",
     "preview": "vite preview"
   },
