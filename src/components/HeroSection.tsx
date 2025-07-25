@@ -3,32 +3,39 @@ import { AppStoreButtons } from './AppStoreButtons'
 
 export const HeroSection = () => {
   return (
-    <section className="relative bg-gradient-to-br from-gray-900 to-blue-900 text-white py-24 lg:py-32 overflow-hidden">
-      {/* Background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-1/4 -right-1/4 w-1/2 h-1/2 bg-blue-500 opacity-10 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-1/4 -left-1/4 w-1/2 h-1/2 bg-indigo-500 opacity-10 rounded-full blur-3xl"></div>
+    <section className="relative bg-gradient-to-br from-gray-900 via-gray-900 to-blue-900/90 text-white pt-16 pb-16 lg:pt-16 lg:pb-16 overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden opacity-70">
+        <div className="absolute -top-1/4 -right-1/4 w-1/2 h-1/2 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full blur-[100px] animate-float"></div>
+        <div className="absolute -bottom-1/4 -left-1/4 w-1/2 h-1/2 bg-gradient-to-br from-indigo-600 to-purple-700 rounded-full blur-[100px] animate-float animation-delay-2000"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-full blur-[150px] animate-pulse"></div>
       </div>
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center">
-          <div className="lg:w-1/2 lg:pr-12 mb-12 lg:mb-0 text-center lg:text-left">
-            <div className="inline-flex items-center px-4 py-2 bg-blue-600 bg-opacity-20 rounded-full mb-6">
-              <span className="h-2 w-2 bg-blue-400 rounded-full mr-2"></span>
-              <span className="text-sm font-medium text-blue-300">
-                Never lose your conversations again
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 py-12 lg:py-24">
+          {/* Text content - full width on mobile, half on desktop */}
+          <div className="w-full lg:w-1/2 text-center lg:text-left">
+            <div className="inline-flex items-center px-4 py-2 bg-blue-600/20 backdrop-blur-sm rounded-full mb-8 transform transition-all hover:scale-105">
+              <span className="h-2 w-2 bg-blue-400 rounded-full mr-3 animate-pulse"></span>
+              <span className="text-sm font-medium text-blue-300 tracking-wider">
+                NEVER LOSE YOUR CONVERSATIONS AGAIN
               </span>
             </div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-200">Backup Messages</span>
-              <br />
-              <span className="text-blue-400">Search Everything</span>
-              <br />
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-200">Never Lose 'Em</span>
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight mb-8 leading-[1.1]">
+              <div className="whitespace-nowrap">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-100 to-blue-300">Backup Texts and Calls</span>
+              </div>
+              <div className="whitespace-nowrap">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-blue-400 to-blue-500">Search Everything</span>
+              </div>
+              <div className="whitespace-nowrap">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-100 to-blue-300">Never Lose 'Em</span>
+              </div>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-300 max-w-xl mx-auto lg:mx-0">
-              Securely back up all your messages, find any conversation instantly, and keep them forever. MessageMirror makes your message history searchable and safe.
+            <p className="text-xl text-gray-300/90 max-w-2xl mx-auto lg:mx-0 mb-10 leading-relaxed">
+              Securely back up all your messages, find any conversation instantly, and keep them forever. MessageMirror makes your message history searchable and safe across all your devices.
             </p>
-            <div className="mb-10">
+            <div className="mb-12 transform transition-all hover:scale-[1.02] duration-300">
               <AppStoreButtons />
             </div>
             <div className="flex items-center justify-center lg:justify-start space-x-6 text-gray-300">
@@ -60,7 +67,8 @@ export const HeroSection = () => {
               </div>
             </div>
           </div>
-          <div className="lg:w-1/2 relative">
+          {/* Phone container - relative on mobile, absolute on larger screens */}
+          <div className="relative lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2 w-full max-w-xs mx-auto lg:mx-0 lg:w-1/2 xl:w-1/3 2xl:w-1/4 opacity-90">
             {/* Phone mockup with app screenshot */}
             <div className="relative mx-auto max-w-xs">
               {/* Phone frame */}

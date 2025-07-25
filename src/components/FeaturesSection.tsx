@@ -34,38 +34,40 @@ const features = [
 
 export const FeaturesSection = () => {
   return (
-    <section id="features" className="py-24 bg-gray-900">
+    <section id="features" className="py-28 bg-gradient-to-b from-gray-900 to-gray-900/95">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-blue-600 bg-opacity-20 rounded-full mb-6">
-            <span className="text-sm font-medium text-blue-400">
-              Core Features
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          <div className="inline-flex items-center px-4 py-2 bg-blue-600/20 backdrop-blur-sm rounded-full mb-6 transform transition-all hover:scale-105">
+            <span className="text-sm font-medium text-blue-400 tracking-wider">
+              CORE FEATURES
             </span>
           </div>
-          <h2 className="text-3xl font-bold text-white sm:text-4xl mb-6">
+          <h2 className="text-4xl font-bold text-white sm:text-5xl mb-6 leading-tight">
             Your Messages,{' '}
-            <span className="text-blue-400">Backed Up Forever</span>
+            <span className="bg-gradient-to-r from-blue-400 to-blue-300 text-transparent bg-clip-text">Backed Up Forever</span>
           </h2>
-          <p className="mt-4 text-xl text-gray-300">
-            MessageMirror seamlessly integrates with Gmail to preserve your
-            conversations and make them searchable.
+          <p className="mt-6 text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
+            MessageMirror seamlessly integrates with Google to preserve your
+            conversations and calls to make them searchable across all your devices.
           </p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature) => (
             <div
               key={feature.id}
-              className="bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-gray-700 hover:border-blue-500/30 group"
+              className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-700/50 hover:border-blue-500/30 group hover:-translate-y-1"
             >
-              <div className="flex items-center gap-4 mb-4">
-                <div className="p-3 bg-blue-500 bg-opacity-10 rounded-xl inline-block group-hover:bg-opacity-20 transition-all flex-shrink-0">
-                  {feature.icon}
+              <div className="flex items-center gap-4 mb-5">
+                <div className="p-3 bg-gradient-to-br from-blue-500/10 to-blue-600/10 rounded-xl group-hover:from-blue-500/20 group-hover:to-blue-600/20 transition-all duration-300 flex-shrink-0">
+                  {React.cloneElement(feature.icon, {
+                    className: `${feature.icon.props.className} transition-transform group-hover:scale-110`
+                  })}
                 </div>
-                <h3 className="text-xl font-semibold text-white">
+                <h3 className="text-xl font-semibold text-white group-hover:text-blue-400 transition-colors">
                   {feature.title}
                 </h3>
               </div>
-              <p className="text-gray-400">{feature.description}</p>
+              <p className="text-gray-400/90 leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </div>

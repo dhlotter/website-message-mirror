@@ -1,8 +1,8 @@
-				import worker, * as OTHER_EXPORTS from "/Users/dhlotter/Downloads/sourcecontrol/website-message-mirror/.wrangler/tmp/pages-Ot19iH/functionsWorker-0.1732337628203.mjs";
+				import worker, * as OTHER_EXPORTS from "/Users/dhlotter/Downloads/sourcecontrol/website-message-mirror/.wrangler/tmp/pages-Vu3y0y/functionsWorker-0.08319515550710388.mjs";
 				import * as __MIDDLEWARE_0__ from "/Users/dhlotter/Downloads/sourcecontrol/website-message-mirror/node_modules/wrangler/templates/middleware/middleware-ensure-req-body-drained.ts";
 import * as __MIDDLEWARE_1__ from "/Users/dhlotter/Downloads/sourcecontrol/website-message-mirror/node_modules/wrangler/templates/middleware/middleware-miniflare3-json-error.ts";
 
-				export * from "/Users/dhlotter/Downloads/sourcecontrol/website-message-mirror/.wrangler/tmp/pages-Ot19iH/functionsWorker-0.1732337628203.mjs";
+				export * from "/Users/dhlotter/Downloads/sourcecontrol/website-message-mirror/.wrangler/tmp/pages-Vu3y0y/functionsWorker-0.08319515550710388.mjs";
 				const MIDDLEWARE_TEST_INJECT = "__INJECT_FOR_TESTING_WRANGLER_MIDDLEWARE__";
 				export const __INTERNAL_WRANGLER_MIDDLEWARE__ = [
 					
