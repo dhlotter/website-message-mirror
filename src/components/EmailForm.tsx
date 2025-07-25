@@ -32,13 +32,12 @@ export const EmailForm = () => {
   };
 
   return (
-    <section className="py-12 bg-gray-900 sm:py-16 lg:py-20">
+    <section className="py-20 bg-gray-900">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white sm:text-4xl">Get Notified</h2>
-          <p className="mt-4 text-lg text-gray-400">Be the first to know when MessageMirror launches. We will never spam you.</p>
+        <div className="max-w-2xl mx-auto text-center mb-12">
+          <h2 className="text-3xl font-bold text-white sm:text-4xl mb-4">Subscribe to the Newsletter</h2>
         </div>
-        <form onSubmit={handleSubmit} className="max-w-md mx-auto mt-8 space-y-4">
+        <form onSubmit={handleSubmit} className="max-w-md mx-auto space-y-4">
           <div className="relative">
             <input
               type="email"

@@ -46,7 +46,7 @@ export const Header = () => {
             <a 
               href="/" 
               onClick={handleLogoClick}
-              className="text-2xl font-bold text-white hover:opacity-90 transition-opacity"
+              className="logo-link text-2xl font-bold text-white hover:opacity-90 transition-opacity"
             >
               Message<span className="text-blue-400">Mirror</span>
             </a>

@@ -34,22 +34,13 @@ const features = [
 
 export const FeaturesSection = () => {
   return (
-    <section id="features" className="py-28 bg-gradient-to-b from-gray-900 to-gray-900/95">
+    <section id="features" className="py-20 bg-gradient-to-b from-gray-900 to-gray-900/95">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-20">
-          <div className="inline-flex items-center px-4 py-2 bg-blue-600/20 backdrop-blur-sm rounded-full mb-6 transform transition-all hover:scale-105">
-            <span className="text-sm font-medium text-blue-400 tracking-wider">
-              CORE FEATURES
-            </span>
-          </div>
-          <h2 className="text-4xl font-bold text-white sm:text-5xl mb-6 leading-tight">
-            Your Messages,{' '}
-            <span className="bg-gradient-to-r from-blue-400 to-blue-300 text-transparent bg-clip-text">Backed Up Forever</span>
+        <div className="text-center max-w-3xl mx-auto mb-12">
+          <h2 className="text-3xl font-bold text-white sm:text-4xl mb-4">
+            Core{' '}
+            <span className="text-blue-400">Features</span>
           </h2>
-          <p className="mt-6 text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            MessageMirror seamlessly integrates with Google to preserve your
-            conversations and calls to make them searchable across all your devices.
-          </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature) => (

@@ -20,6 +20,12 @@
     font-size: 100%; /* Reset font size to counteract the root scaling */
   }
   
+  /* Remove focus outline from logo */
+  .logo-link:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  
   /* Custom animations */
   @keyframes float {
     0%, 100% {

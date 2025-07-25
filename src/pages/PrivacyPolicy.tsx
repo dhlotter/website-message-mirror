@@ -80,8 +80,7 @@ export const PrivacyPolicy = () => (
           If you have any questions about this Privacy Policy, please contact us at:
         </p>
         <p>
-          Email: privacy@messagemirror.com<br />
-          Address: 123 Tech Street, San Francisco, CA 94107, USA
+          Email: support@easyentropy.com
         </p>
       </section>
     </div>

@@ -42,18 +42,12 @@ export const FAQSection = () => {
   }
 
   return (
-    <section id="faq" className="py-24 bg-gray-800">
+    <section id="faq" className="py-20 bg-gray-800">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-blue-600 bg-opacity-20 rounded-full mb-6">
-            <span className="text-sm font-medium text-blue-400">FAQ</span>
-          </div>
-          <h2 className="text-3xl font-bold text-white sm:text-4xl mb-6">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-white sm:text-4xl mb-4">
             Frequently Asked <span className="text-blue-400">Questions</span>
           </h2>
-          <p className="mt-4 text-xl text-gray-300">
-            Everything you need to know about MessageMirror.
-          </p>
         </div>
         <div className="space-y-4">
           {faqs.map((faq) => (
