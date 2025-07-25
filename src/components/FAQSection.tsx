@@ -61,23 +61,27 @@ export const FAQSection = () => {
               key={faq.id}
               className="border border-gray-700 rounded-xl overflow-hidden bg-gray-900 hover:border-blue-500/30 transition-colors"
             >
-              <button
-                className="w-full flex justify-between items-center px-6 py-4 text-left focus:outline-none"
-                onClick={() => toggleFaq(faq.id)}
-              >
-                <span className="text-lg font-medium text-white">
-                  {faq.question}
-                </span>
-                <div
-                  className={`w-8 h-8 rounded-full flex items-center justify-center ${openId === faq.id ? 'bg-blue-500' : 'bg-gray-700'} transition-colors`}
+              <div className="flex items-center">
+                <button
+                  className="flex-1 text-left px-6 py-4 focus:outline-none"
+                  onClick={() => toggleFaq(faq.id)}
+                >
+                  <span className="text-lg font-medium text-white">
+                    {faq.question}
+                  </span>
+                </button>
+                <button
+                  onClick={() => toggleFaq(faq.id)}
+                  className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center mr-4 ${openId === faq.id ? 'bg-blue-500' : 'bg-gray-700'} transition-colors`}
+                  aria-label={openId === faq.id ? 'Collapse answer' : 'Expand answer'}
                 >
                   {openId === faq.id ? (
-                    <ChevronUp className="w-5 h-5 text-white" />
+                    <ChevronUp className="w-4 h-4 text-white" />
                   ) : (
-                    <ChevronDown className="w-5 h-5 text-white" />
+                    <ChevronDown className="w-4 h-4 text-white" />
                   )}
-                </div>
-              </button>
+                </button>
+              </div>
               {openId === faq.id && (
                 <div className="px-6 py-4 border-t border-gray-700">
                   <p className="text-gray-300">{faq.answer}</p>

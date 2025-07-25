@@ -42,6 +42,8 @@ export const EmailForm = () => {
           <div className="relative">
             <input
               type="email"
+              name="email"
+              autoComplete="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email address"
