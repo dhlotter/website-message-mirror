@@ -1,15 +1,17 @@
 import React from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
-import { Header } from './components/Header';
-import { Footer } from './components/Footer';
-import { HeroSection } from './components/HeroSection';
-import { FeaturesSection } from './components/FeaturesSection';
-import { FAQSection } from './components/FAQSection';
-import { TestimonialsSection } from './components/TestimonialsSection';
+import { Header } from './components/layout/Header';
+import { Footer } from './components/layout/Footer';
+import { HeroSection } from './components/sections/HeroSection';
+import { FeaturesSection } from './components/sections/FeaturesSection';
+import { FAQSection } from './components/sections/FAQSection';
+import { TestimonialsSection } from './components/sections/TestimonialsSection';
 import { PrivacyPolicy } from './pages/PrivacyPolicy';
 import { TermsOfService } from './pages/TermsOfService';
 import { ScrollToTop } from './components/ScrollToTop';
 import { EmailForm } from './components/EmailForm';
+import { PricingSection } from './components/sections/PricingSection';
+import { ContactSection } from './components/sections/ContactSection';
 
 // Feature flags
 const FEATURE_FLAGS = {
@@ -48,7 +50,9 @@ const Home = () => (
   <>
     <HeroSection />
     <FeaturesSection />
+    <PricingSection />
     {FEATURE_FLAGS.SHOW_TESTIMONIALS && <TestimonialsSection />}
+    <ContactSection />
     <FAQSection />
     <EmailForm />
   </>
