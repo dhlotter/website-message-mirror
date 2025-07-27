@@ -26,19 +26,19 @@ const features = [
 const plans: Plan[] = [
   {
     name: 'Monthly',
-    price: '$1',
+    price: '$0.99',
     period: '/month',
     description: 'Flexible monthly plan.',
   },
   {
-    name: 'Yearly',
-    price: '$10',
+    name: 'Annual',
+    price: '$9.99',
     period: '/year',
     description: 'Save with an annual plan.',
   },
   {
     name: 'Lifetime',
-    price: '$25',
+    price: '$29.99',
     period: ' one-time payment',
     description: 'Pay once, own it forever.',
   },

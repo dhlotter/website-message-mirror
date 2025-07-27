@@ -46,7 +46,7 @@ export const FAQSection = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-white sm:text-4xl mb-4">
-            Frequently Asked <span className="text-blue-400">Questions</span>
+            Frequently <span className="text-blue-400">Asked</span> Questions
           </h2>
         </div>
         <div className="space-y-4">

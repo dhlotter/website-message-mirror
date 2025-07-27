@@ -11,7 +11,7 @@ import { TermsOfService } from './pages/TermsOfService';
 import { ScrollToTop } from './components/ScrollToTop';
 import { EmailForm } from './components/EmailForm';
 import { PricingSection } from './components/sections/PricingSection';
-import { ContactSection } from './components/sections/ContactSection';
+import { ContactAndNewsletterSection } from './components/sections/ContactAndNewsletterSection';
 
 // Feature flags
 const FEATURE_FLAGS = {
@@ -52,9 +52,8 @@ const Home = () => (
     <FeaturesSection />
     <PricingSection />
     {FEATURE_FLAGS.SHOW_TESTIMONIALS && <TestimonialsSection />}
-    <ContactSection />
     <FAQSection />
-    <EmailForm />
+    <ContactAndNewsletterSection />
   </>
 );
 
