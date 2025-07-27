@@ -55,9 +55,32 @@ export const ContactAndNewsletterSection: React.FC = () => {
     setContactSubmitting(true);
     setContactStatus(null);
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      console.log('Contact form submitted:', values);
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      });
+
+      // Handle non-JSON responses
+      const responseText = await response.text();
+      let result;
+      try {
+        result = responseText ? JSON.parse(responseText) : {};
+      } catch (e) {
+        console.error('Failed to parse response:', responseText);
+        throw new Error('Invalid response from server');
+      }
+
+      if (!response.ok) {
+        throw new Error(result.error || `Server error: ${response.status} ${response.statusText}`);
+      }
+
+      if (!result.success) {
+        throw new Error(result.error || 'Failed to send message');
+      }
+
       setContactStatus('success');
       resetContactForm();
     } catch (error) {

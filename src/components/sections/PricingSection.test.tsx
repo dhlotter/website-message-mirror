@@ -12,13 +12,13 @@ describe('PricingSection', () => {
 
     // Check for each plan's name
     expect(screen.getByRole('heading', { name: /Monthly/i })).toBeInTheDocument();
-    expect(screen.getByRole('heading', { name: /Yearly/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /Annual/i })).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: /Lifetime/i })).toBeInTheDocument();
 
     // Check for prices
-    expect(screen.getByText('$1')).toBeInTheDocument();
-    expect(screen.getByText('$10')).toBeInTheDocument();
-    expect(screen.getByText('$25')).toBeInTheDocument();
+    expect(screen.getByText('$0.99')).toBeInTheDocument();
+    expect(screen.getByText('$9.99')).toBeInTheDocument();
+    expect(screen.getByText('$29.99')).toBeInTheDocument();
 
     
   });
