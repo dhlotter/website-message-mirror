@@ -111,9 +111,31 @@ export const ContactAndNewsletterSection: React.FC = () => {
     setNewsletterSubmitting(true);
     setNewsletterStatus(null);
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      console.log('Newsletter form submitted:', values);
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      });
+
+      const responseText = await response.text();
+      let result;
+      try {
+        result = responseText ? JSON.parse(responseText) : {};
+      } catch (e) {
+        console.error('Failed to parse newsletter response:', responseText);
+        throw new Error('Invalid response from server');
+      }
+
+      if (!response.ok) {
+        throw new Error(result.error || `Server error: ${response.status} ${response.statusText}`);
+      }
+
+      if (!result.success) {
+        throw new Error(result.error || 'Failed to subscribe');
+      }
+
       setNewsletterStatus('success');
       resetNewsletterForm();
     } catch (error) {
@@ -225,6 +247,7 @@ export const ContactAndNewsletterSection: React.FC = () => {
                   id="newsletter-email"
                   type="email"
                   className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  autocomplete="email"
                   {...registerNewsletter('email')}
                 />
                 {newsletterErrors.email && (
