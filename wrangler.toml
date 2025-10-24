@@ -1,3 +1,10 @@
 name = "website-message-mirror"
 compatibility_date = "2025-07-24"
 
+
+[[kv_namespaces]]
+binding = "EMAILS"
+id = "6a8809ad64564e7bb223457fc32126ac"
+# If you have a preview ID for development, add it here:
+# preview_id = "<YOUR_KV_NAMESPACE_PREVIEW_ID>"
+
