@@ -172,6 +172,7 @@ export const ContactAndNewsletterSection: React.FC = () => {
                   id="name"
                   type="text"
                   className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  autocomplete="name"
                   {...registerContact('name')}
                 />
                 {contactErrors.name && (
@@ -185,6 +186,7 @@ export const ContactAndNewsletterSection: React.FC = () => {
                   id="contact-email"
                   type="email"
                   className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  autocomplete="email"
                   {...registerContact('email')}
                 />
                 {contactErrors.email && (
