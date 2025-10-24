@@ -19,8 +19,11 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
   }
 
   try {
+    console.log('Subscribe function received request.');
     const { request } = context;
     const { email } = await request.json<SubscribeRequestBody>();
+
+    console.log('Received email:', email);
 
     if (!email || typeof email !== 'string' || !/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email)) {
       return new Response(JSON.stringify({ error: 'A valid email is required.' }), {
@@ -30,14 +33,16 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     }
 
     // Store the email in the KV namespace.
+    console.log('Attempting to store email in KV:', email);
     await context.env.EMAILS.put(email, new Date().toISOString());
+    console.log('Successfully stored email in KV:', email);
 
     return new Response(JSON.stringify({ success: true }), {
       status: 200,
       headers: { 'Content-Type': 'application/json' },
     });
   } catch (error) {
-    console.error('Subscription error:', error);
+    console.error('Subscription error caught:', error);
     return new Response(JSON.stringify({ error: 'Internal Server Error' }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' },
