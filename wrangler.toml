@@ -1,5 +1,6 @@
 name = "website-message-mirror"
 compatibility_date = "2025-07-24"
+pages_build_output_dir = "./dist"
 
 
 [[kv_namespaces]]
